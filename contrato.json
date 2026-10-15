@@ -1,65 +1,131 @@
 {
   "versao": 1,
-  "tema": "Biblioteca",
-  "descricao": "Usuários cadastram livros. Qualquer pessoa vê os livros; só quem cadastrou altera ou remove.",
+  "tema": "Controle de Estoque",
+  "descricao": "Comerciantes cadastram produtos e registram entradas e saídas do estoque. Tudo é privado: cada usuário enxerga e altera apenas o que cadastrou.",
   "rotas": [
     {
       "metodo": "GET",
-      "caminho": "/livros",
+      "caminho": "/status",
       "acesso": "aberto",
-      "descricao": "Lista todos os livros.",
+      "descricao": "Health check. Confirma que a API está no ar.",
       "exemplos": [
         {
-          "descricao": "Lista os livros",
+          "descricao": "API no ar",
           "requisicao": null,
-          "resposta": [
-            { "id": 1, "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938, "usuarioId": 3 }
-          ],
+          "resposta": { "status": "ok" },
           "status": 200
         }
       ]
     },
     {
       "metodo": "GET",
-      "caminho": "/livros/:id",
-      "acesso": "aberto",
-      "descricao": "Detalha um livro.",
+      "caminho": "/produtos",
+      "acesso": "logado",
+      "descricao": "Lista os produtos do usuário logado.",
       "exemplos": [
         {
-          "descricao": "Livro existe",
+          "descricao": "Lista os produtos do usuário",
           "requisicao": null,
-          "resposta": { "id": 1, "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938, "usuarioId": 3 },
+          "resposta": [
+            { "id": 1, "nome": "Coxinha", "codigo": "COX01", "preco": 6.5, "quantidade": 50, "estoqueMinimo": 10, "usuarioId": 3 }
+          ],
           "status": 200
         },
         {
-          "descricao": "Livro não existe",
+          "descricao": "Sem token",
           "requisicao": null,
-          "resposta": { "erro": "Livro não encontrado" },
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        }
+      ]
+    },
+    {
+      "metodo": "GET",
+      "caminho": "/produtos/baixo-estoque",
+      "acesso": "logado",
+      "descricao": "Lista os produtos do usuário logado cuja quantidade está igual ou abaixo do estoqueMinimo.",
+      "exemplos": [
+        {
+          "descricao": "Lista produtos com estoque baixo",
+          "requisicao": null,
+          "resposta": [
+            { "id": 2, "nome": "Pastel", "codigo": "PAS01", "preco": 7, "quantidade": 4, "estoqueMinimo": 10, "usuarioId": 3 }
+          ],
+          "status": 200
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": null,
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        }
+      ]
+    },
+    {
+      "metodo": "GET",
+      "caminho": "/produtos/:id",
+      "acesso": "dono",
+      "descricao": "Detalha um produto. Só o dono pode.",
+      "exemplos": [
+        {
+          "descricao": "Dono consulta o produto",
+          "requisicao": null,
+          "resposta": { "id": 1, "nome": "Coxinha", "codigo": "COX01", "preco": 6.5, "quantidade": 50, "estoqueMinimo": 10, "usuarioId": 3 },
+          "status": 200
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": null,
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        },
+        {
+          "descricao": "Logado, mas não é o dono",
+          "requisicao": null,
+          "resposta": { "erro": "Sem permissão para acessar este produto" },
+          "status": 403
+        },
+        {
+          "descricao": "Produto não existe",
+          "requisicao": null,
+          "resposta": { "erro": "Produto não encontrado" },
           "status": 404
         }
       ]
     },
     {
       "metodo": "POST",
-      "caminho": "/livros",
+      "caminho": "/produtos",
       "acesso": "logado",
-      "descricao": "Cadastra um livro. O dono é quem está logado.",
+      "descricao": "Cadastra um produto. O dono é quem está logado e a quantidade inicia em 0.",
       "exemplos": [
         {
           "descricao": "Dados válidos",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
-          "resposta": { "id": 1, "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938, "usuarioId": 3 },
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 6.5, "estoqueMinimo": 10 },
+          "resposta": { "id": 1, "nome": "Coxinha", "codigo": "COX01", "preco": 6.5, "quantidade": 0, "estoqueMinimo": 10, "usuarioId": 3 },
           "status": 201
         },
         {
-          "descricao": "Falta o autor",
-          "requisicao": { "titulo": "Vidas Secas" },
-          "resposta": { "erro": "Campo obrigatório ausente: autor" },
+          "descricao": "Falta o código",
+          "requisicao": { "nome": "Coxinha", "preco": 6.5 },
+          "resposta": { "erro": "Campo obrigatório ausente: codigo" },
+          "status": 400
+        },
+        {
+          "descricao": "Preço negativo",
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": -3 },
+          "resposta": { "erro": "Preço deve ser maior que zero" },
+          "status": 400
+        },
+        {
+          "descricao": "Código já usado por este usuário",
+          "requisicao": { "nome": "Coxinha de Frango", "codigo": "COX01", "preco": 7 },
+          "resposta": { "erro": "Já existe um produto com este código" },
           "status": 400
         },
         {
           "descricao": "Sem token",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 6.5 },
           "resposta": { "erro": "Token ausente ou inválido" },
           "status": 401
         }
@@ -67,50 +133,56 @@
     },
     {
       "metodo": "PUT",
-      "caminho": "/livros/:id",
+      "caminho": "/produtos/:id",
       "acesso": "dono",
-      "descricao": "Altera um livro. Só o dono pode.",
+      "descricao": "Altera os dados de um produto. Só o dono pode. A quantidade não é alterada aqui, apenas por movimentações.",
       "exemplos": [
         {
-          "descricao": "Dono altera o livro",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
-          "resposta": { "id": 1, "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938, "usuarioId": 3 },
+          "descricao": "Dono altera o produto",
+          "requisicao": { "nome": "Coxinha de Frango", "codigo": "COX01", "preco": 7, "estoqueMinimo": 15 },
+          "resposta": { "id": 1, "nome": "Coxinha de Frango", "codigo": "COX01", "preco": 7, "quantidade": 50, "estoqueMinimo": 15, "usuarioId": 3 },
           "status": 200
         },
         {
-          "descricao": "Ano no futuro",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 2999 },
-          "resposta": { "erro": "Ano não pode ser no futuro" },
+          "descricao": "Preço zero",
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 0 },
+          "resposta": { "erro": "Preço deve ser maior que zero" },
+          "status": 400
+        },
+        {
+          "descricao": "Código já usado em outro produto do usuário",
+          "requisicao": { "nome": "Coxinha", "codigo": "PAS01", "preco": 6.5 },
+          "resposta": { "erro": "Já existe um produto com este código" },
           "status": 400
         },
         {
           "descricao": "Sem token",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 6.5 },
           "resposta": { "erro": "Token ausente ou inválido" },
           "status": 401
         },
         {
           "descricao": "Logado, mas não é o dono",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
-          "resposta": { "erro": "Sem permissão para alterar este livro" },
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 6.5 },
+          "resposta": { "erro": "Sem permissão para alterar este produto" },
           "status": 403
         },
         {
-          "descricao": "Livro não existe",
-          "requisicao": { "titulo": "Vidas Secas", "autor": "Graciliano Ramos", "ano": 1938 },
-          "resposta": { "erro": "Livro não encontrado" },
+          "descricao": "Produto não existe",
+          "requisicao": { "nome": "Coxinha", "codigo": "COX01", "preco": 6.5 },
+          "resposta": { "erro": "Produto não encontrado" },
           "status": 404
         }
       ]
     },
     {
       "metodo": "DELETE",
-      "caminho": "/livros/:id",
+      "caminho": "/produtos/:id",
       "acesso": "dono",
-      "descricao": "Remove um livro. Só o dono pode.",
+      "descricao": "Remove um produto e suas movimentações. Só o dono pode.",
       "exemplos": [
         {
-          "descricao": "Dono remove o livro",
+          "descricao": "Dono remove o produto",
           "requisicao": null,
           "resposta": null,
           "status": 204
@@ -124,13 +196,174 @@
         {
           "descricao": "Logado, mas não é o dono",
           "requisicao": null,
-          "resposta": { "erro": "Sem permissão para remover este livro" },
+          "resposta": { "erro": "Sem permissão para remover este produto" },
           "status": 403
         },
         {
-          "descricao": "Livro não existe",
+          "descricao": "Produto não existe",
           "requisicao": null,
-          "resposta": { "erro": "Livro não encontrado" },
+          "resposta": { "erro": "Produto não encontrado" },
+          "status": 404
+        }
+      ]
+    },
+    {
+      "metodo": "POST",
+      "caminho": "/produtos/:id/movimentacoes",
+      "acesso": "dono",
+      "descricao": "Registra uma entrada ou saída de estoque para o produto e atualiza a quantidade do produto na mesma transação. Só o dono do produto pode.",
+      "exemplos": [
+        {
+          "descricao": "Entrada válida",
+          "requisicao": { "tipo": "entrada", "quantidade": 30, "observacao": "compra do fornecedor" },
+          "resposta": { "id": 1, "produtoId": 1, "tipo": "entrada", "quantidade": 30, "observacao": "compra do fornecedor", "usuarioId": 3 },
+          "status": 201
+        },
+        {
+          "descricao": "Saída válida",
+          "requisicao": { "tipo": "saida", "quantidade": 5, "observacao": "venda balcão" },
+          "resposta": { "id": 2, "produtoId": 1, "tipo": "saida", "quantidade": 5, "observacao": "venda balcão", "usuarioId": 3 },
+          "status": 201
+        },
+        {
+          "descricao": "Falta o tipo",
+          "requisicao": { "quantidade": 5 },
+          "resposta": { "erro": "Campo obrigatório ausente: tipo" },
+          "status": 400
+        },
+        {
+          "descricao": "Tipo inválido",
+          "requisicao": { "tipo": "devolucao", "quantidade": 5 },
+          "resposta": { "erro": "Tipo deve ser 'entrada' ou 'saida'" },
+          "status": 400
+        },
+        {
+          "descricao": "Quantidade zero ou negativa",
+          "requisicao": { "tipo": "entrada", "quantidade": 0 },
+          "resposta": { "erro": "Quantidade deve ser maior que zero" },
+          "status": 400
+        },
+        {
+          "descricao": "Saída maior que o estoque atual",
+          "requisicao": { "tipo": "saida", "quantidade": 999 },
+          "resposta": { "erro": "Estoque insuficiente para esta saída" },
+          "status": 400
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": { "tipo": "entrada", "quantidade": 30 },
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        },
+        {
+          "descricao": "Logado, mas não é o dono do produto",
+          "requisicao": { "tipo": "entrada", "quantidade": 30 },
+          "resposta": { "erro": "Sem permissão para movimentar este produto" },
+          "status": 403
+        },
+        {
+          "descricao": "Produto não existe",
+          "requisicao": { "tipo": "entrada", "quantidade": 30 },
+          "resposta": { "erro": "Produto não encontrado" },
+          "status": 404
+        }
+      ]
+    },
+    {
+      "metodo": "GET",
+      "caminho": "/produtos/:id/movimentacoes",
+      "acesso": "dono",
+      "descricao": "Lista as movimentações de um produto. Só o dono do produto pode.",
+      "exemplos": [
+        {
+          "descricao": "Lista as movimentações do produto",
+          "requisicao": null,
+          "resposta": [
+            { "id": 1, "produtoId": 1, "tipo": "entrada", "quantidade": 30, "observacao": "compra do fornecedor", "usuarioId": 3 },
+            { "id": 2, "produtoId": 1, "tipo": "saida", "quantidade": 5, "observacao": "venda balcão", "usuarioId": 3 }
+          ],
+          "status": 200
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": null,
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        },
+        {
+          "descricao": "Logado, mas não é o dono do produto",
+          "requisicao": null,
+          "resposta": { "erro": "Sem permissão para acessar este produto" },
+          "status": 403
+        },
+        {
+          "descricao": "Produto não existe",
+          "requisicao": null,
+          "resposta": { "erro": "Produto não encontrado" },
+          "status": 404
+        }
+      ]
+    },
+    {
+      "metodo": "GET",
+      "caminho": "/movimentacoes/:id",
+      "acesso": "dono",
+      "descricao": "Detalha uma movimentação. Só o dono pode.",
+      "exemplos": [
+        {
+          "descricao": "Dono consulta a movimentação",
+          "requisicao": null,
+          "resposta": { "id": 1, "produtoId": 1, "tipo": "entrada", "quantidade": 30, "observacao": "compra do fornecedor", "usuarioId": 3 },
+          "status": 200
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": null,
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        },
+        {
+          "descricao": "Logado, mas não é o dono",
+          "requisicao": null,
+          "resposta": { "erro": "Sem permissão para acessar esta movimentação" },
+          "status": 403
+        },
+        {
+          "descricao": "Movimentação não existe",
+          "requisicao": null,
+          "resposta": { "erro": "Movimentação não encontrada" },
+          "status": 404
+        }
+      ]
+    },
+    {
+      "metodo": "DELETE",
+      "caminho": "/movimentacoes/:id",
+      "acesso": "dono",
+      "descricao": "Remove uma movimentação e desfaz seu efeito na quantidade do produto, na mesma transação. Só o dono pode.",
+      "exemplos": [
+        {
+          "descricao": "Dono remove a movimentação",
+          "requisicao": null,
+          "resposta": null,
+          "status": 204
+        },
+        {
+          "descricao": "Sem token",
+          "requisicao": null,
+          "resposta": { "erro": "Token ausente ou inválido" },
+          "status": 401
+        },
+        {
+          "descricao": "Logado, mas não é o dono",
+          "requisicao": null,
+          "resposta": { "erro": "Sem permissão para remover esta movimentação" },
+          "status": 403
+        },
+        {
+          "descricao": "Movimentação não existe",
+          "requisicao": null,
+          "resposta": { "erro": "Movimentação não encontrada" },
           "status": 404
         }
       ]
