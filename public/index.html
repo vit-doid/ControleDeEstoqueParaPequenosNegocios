@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controle de Estoque</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --text: #1d2433; --muted: #6b7385;
+    --border: #e2e5ec; --primary: #2563eb; --primary-text: #ffffff;
+    --danger: #dc2626; --ok: #16a34a; --warn-bg: #fef3c7; --warn: #92400e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151c; --card: #1b2030; --text: #e8ebf3; --muted: #99a1b5;
+      --border: #2c3348; --primary: #4f8cff; --primary-text: #0b1020;
+      --danger: #f87171; --ok: #4ade80; --warn-bg: #3b2f0b; --warn: #fcd34d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 20px 24px 0; max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 1.4rem; margin: 0 0 16px; }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px 24px 48px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+  .card small { color: var(--muted); display: block; margin-bottom: 4px; }
+  .card strong { font-size: 1.35rem; }
+  .card.alerta strong { color: var(--danger); }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; align-items: center; }
+  .tabs { display: flex; gap: 4px; margin-left: auto; }
+  input, select, button { font: inherit; color: inherit; }
+  input, select { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+  input:focus, select:focus { outline: 2px solid var(--primary); outline-offset: -1px; }
+  #busca { flex: 1; min-width: 180px; }
+  button { cursor: pointer; border: 1px solid var(--border); background: var(--card); border-radius: 8px; padding: 8px 14px; }
+  button:hover { border-color: var(--primary); }
+  button.primary { background: var(--primary); color: var(--primary-text); border-color: var(--primary); font-weight: 600; }
+  button.tab.ativa { background: var(--primary); color: var(--primary-text); border-color: var(--primary); }
+  button.mini { padding: 4px 9px; font-size: .85rem; }
+  button.perigo { color: var(--danger); }
+  .tabela { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; min-width: 720px; }
+  th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  th { font-size: .8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+  tr:last-child td { border-bottom: 0; }
+  td.num, th.num { text-align: right; }
+  .acoes { display: flex; gap: 6px; justify-content: flex-end; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: .78rem; font-weight: 600; background: var(--warn-bg); color: var(--warn); }
+  .entrada { color: var(--ok); font-weight: 600; } .saida { color: var(--danger); font-weight: 600; }
+  .vazio { text-align: center; color: var(--muted); padding: 32px 12px; }
+  dialog { border: 1px solid var(--border); border-radius: 14px; background: var(--card); color: var(--text); padding: 22px; width: min(440px, 92vw); }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  dialog h2 { margin: 0 0 14px; font-size: 1.15rem; }
+  label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 10px; }
+  label input, label select { display: block; width: 100%; margin-top: 4px; color: var(--text); }
+  .linha { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .rodape { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+  .erro { color: var(--danger); font-size: .9rem; min-height: 1.2em; margin: 0 0 4px; }
+</style>
+</head>
+<body>
+<header><h1> Controle de Estoque</h1></header>
+<main>
+  <section class="cards" id="resumo"></section>
+
+  <div class="toolbar">
+    <input id="busca" type="search" placeholder="Buscar por nome, código ou categoria…">
+    <label style="margin:0;display:flex;align-items:center;gap:6px;font-size:.9rem">
+      <input type="checkbox" id="soBaixo" style="width:auto;margin:0"> Só estoque baixo
+    </label>
+    <button class="primary" id="novo">+ Novo produto</button>
+    <div class="tabs">
+      <button class="tab ativa" data-aba="produtos">Produtos</button>
+      <button class="tab" data-aba="historico">Histórico</button>
+    </div>
+  </div>
+
+  <div class="tabela"><table id="tabela"></table></div>
+</main>
+
+<dialog id="dlgProduto">
+  <form method="dialog" id="formProduto">
+    <h2 id="tituloProduto">Novo produto</h2>
+    <label>Nome *<input name="nome" required></label>
+    <div class="linha">
+      <label>Código / SKU<input name="codigo"></label>
+      <label>Categoria<input name="categoria"></label>
+    </div>
+    <div class="linha">
+      <label>Preço de custo (R$)<input name="custo" type="number" min="0" step="0.01" value="0"></label>
+      <label>Preço de venda (R$)<input name="preco" type="number" min="0" step="0.01" value="0"></label>
+    </div>
+    <div class="linha">
+      <label id="lblQtd">Quantidade inicial<input name="quantidade" type="number" min="0" step="1" value="0"></label>
+      <label>Estoque mínimo<input name="minimo" type="number" min="0" step="1" value="0"></label>
+    </div>
+    <p class="erro" id="erroProduto"></p>
+    <div class="rodape">
+      <button type="button" data-fechar>Cancelar</button>
+      <button class="primary" type="submit">Salvar</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="dlgMov">
+  <form method="dialog" id="formMov">
+    <h2 id="tituloMov"></h2>
+    <label>Tipo
+      <select name="tipo">
+        <option value="entrada">Entrada (compra / reposição)</option>
+        <option value="saida">Saída (venda / perda)</option>
+      </select>
+    </label>
+    <label>Quantidade<input name="quantidade" type="number" min="1" step="1" value="1" required></label>
+    <label>Observação<input name="observacao" placeholder="Ex.: venda balcão, compra fornecedor X"></label>
+    <p class="erro" id="erroMov"></p>
+    <div class="rodape">
+      <button type="button" data-fechar>Cancelar</button>
+      <button class="primary" type="submit">Registrar</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const brl = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+let produtos = [], aba = 'produtos', editandoId = null, movId = null;
+
+async function api(url, opts = {}) {
+  const r = await fetch(url, { headers: { 'Content-Type': 'application/json' }, ...opts });
+  if (r.status === 204) return null;
+  const dados = await r.json();
+  if (!r.ok) throw new Error(dados.erro || 'Erro inesperado.');
+  return dados;
+}
+
+async function atualizar() {
+  const [resumo, lista] = await Promise.all([api('/api/resumo'), api('/api/produtos')]);
+  produtos = lista;
+  $('#resumo').innerHTML = `
+    <div class="card"><small>Produtos</small><strong>${resumo.totalProdutos}</strong></div>
+    <div class="card"><small>Unidades em estoque</small><strong>${resumo.totalUnidades}</strong></div>
+    <div class="card"><small>Valor a custo</small><strong>${brl(resumo.valorCusto)}</strong></div>
+    <div class="card"><small>Valor de venda</small><strong>${brl(resumo.valorVenda)}</strong></div>
+    <div class="card ${resumo.baixoEstoque ? 'alerta' : ''}"><small>Estoque baixo</small><strong>${resumo.baixoEstoque}</strong></div>`;
+  await desenhar();
+}
+
+async function desenhar() {
+  const t = $('#tabela');
+  const mostrarFiltros = aba === 'produtos';
+  $('#busca').style.display = $('#soBaixo').parentElement.style.display = $('#novo').style.display = mostrarFiltros ? '' : 'none';
+
+  if (aba === 'historico') {
+    const movs = await api('/api/movimentacoes');
+    t.innerHTML = `<thead><tr><th>Data</th><th>Produto</th><th>Tipo</th><th class="num">Qtd</th><th>Observação</th></tr></thead><tbody>` +
+      (movs.length ? movs.map((m) => `<tr>
+        <td>${new Date(m.data).toLocaleString('pt-BR')}</td><td>${esc(m.produto)}</td>
+        <td class="${m.tipo}">${m.tipo === 'entrada' ? '▲ Entrada' : '▼ Saída'}</td>
+        <td class="num">${m.quantidade}</td><td>${esc(m.observacao)}</td></tr>`).join('')
+        : `<tr><td colspan="5" class="vazio">Nenhuma movimentação ainda.</td></tr>`) + `</tbody>`;
+    return;
+  }
+
+  const q = $('#busca').value.toLowerCase().trim();
+  const lista = produtos.filter((p) =>
+    (!q || [p.nome, p.codigo, p.categoria].some((c) => c.toLowerCase().includes(q))) &&
+    (!$('#soBaixo').checked || p.quantidade <= p.minimo));
+
+  t.innerHTML = `<thead><tr><th>Produto</th><th>Código</th><th>Categoria</th><th class="num">Estoque</th>
+    <th class="num">Custo</th><th class="num">Venda</th><th></th></tr></thead><tbody>` +
+    (lista.length ? lista.map((p) => `<tr>
+      <td>${esc(p.nome)}</td><td>${esc(p.codigo) || '—'}</td><td>${esc(p.categoria) || '—'}</td>
+      <td class="num">${p.quantidade} ${p.quantidade <= p.minimo ? '<span class="badge">baixo</span>' : ''}</td>
+      <td class="num">${brl(p.custo)}</td><td class="num">${brl(p.preco)}</td>
+      <td><div class="acoes">
+        <button class="mini primary" data-mov="${p.id}">± Estoque</button>
+        <button class="mini" data-edit="${p.id}">Editar</button>
+        <button class="mini perigo" data-del="${p.id}">Excluir</button>
+      </div></td></tr>`).join('')
+      : `<tr><td colspan="7" class="vazio">Nenhum produto encontrado. Clique em “+ Novo produto” para começar.</td></tr>`) + `</tbody>`;
+}
+
+// ----- eventos -----
+document.querySelectorAll('.tab').forEach((b) => b.addEventListener('click', () => {
+  aba = b.dataset.aba;
+  document.querySelectorAll('.tab').forEach((x) => x.classList.toggle('ativa', x === b));
+  desenhar();
+}));
+$('#busca').addEventListener('input', desenhar);
+$('#soBaixo').addEventListener('change', desenhar);
+document.querySelectorAll('[data-fechar]').forEach((b) => b.addEventListener('click', () => b.closest('dialog').close()));
+
+$('#novo').addEventListener('click', () => {
+  editandoId = null;
+  $('#formProduto').reset();
+  $('#tituloProduto').textContent = 'Novo produto';
+  $('#lblQtd').style.display = '';
+  $('#erroProduto').textContent = '';
+  $('#dlgProduto').showModal();
+});
+
+$('#tabela').addEventListener('click', async (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  if (b.dataset.edit) {
+    const p = produtos.find((x) => x.id == b.dataset.edit);
+    editandoId = p.id;
+    const f = $('#formProduto');
+    f.reset();
+    for (const k of ['nome', 'codigo', 'categoria', 'custo', 'preco', 'minimo']) f.elements[k].value = p[k];
+    $('#tituloProduto').textContent = 'Editar produto';
+    $('#lblQtd').style.display = 'none'; // quantidade só muda por movimentação
+    $('#erroProduto').textContent = '';
+    $('#dlgProduto').showModal();
+  } else if (b.dataset.mov) {
+    const p = produtos.find((x) => x.id == b.dataset.mov);
+    movId = p.id;
+    $('#formMov').reset();
+    $('#tituloMov').textContent = `${p.nome} — em estoque: ${p.quantidade}`;
+    $('#erroMov').textContent = '';
+    $('#dlgMov').showModal();
+  } else if (b.dataset.del) {
+    const p = produtos.find((x) => x.id == b.dataset.del);
+    if (confirm(`Excluir "${p.nome}"? Essa ação não pode ser desfeita.`)) {
+      await api(`/api/produtos/${p.id}`, { method: 'DELETE' });
+      atualizar();
+    }
+  }
+});
+
+$('#formProduto').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const corpo = Object.fromEntries(new FormData(e.target));
+  try {
+    await api(editandoId ? `/api/produtos/${editandoId}` : '/api/produtos',
+      { method: editandoId ? 'PUT' : 'POST', body: JSON.stringify(corpo) });
+    $('#dlgProduto').close();
+    atualizar();
+  } catch (err) { $('#erroProduto').textContent = err.message; }
+});
+
+$('#formMov').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  try {
+    await api(`/api/produtos/${movId}/movimentacoes`, { method: 'POST', body: JSON.stringify(Object.fromEntries(new FormData(e.target))) });
+    $('#dlgMov').close();
+    atualizar();
+  } catch (err) { $('#erroMov').textContent = err.message; }
+});
+
+atualizar();
+</script>
+</body>
+</html>
