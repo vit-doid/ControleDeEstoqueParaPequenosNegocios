@@ -1,0 +1,36 @@
+{
+  "proximoId": 2,
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Arroz",
+      "codigo": "",
+      "categoria": "alimento",
+      "quantidade": 10,
+      "minimo": 60,
+      "custo": 3,
+      "preco": 6,
+      "criadoEm": "2026-11-18T11:24:30.297Z"
+    }
+  ],
+  "movimentacoes": [
+    {
+      "id": 1795001070297,
+      "produtoId": 1,
+      "produto": "Arroz",
+      "tipo": "entrada",
+      "quantidade": 100,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-18T11:24:30.297Z"
+    },
+    {
+      "id": 1795001089104,
+      "produtoId": 1,
+      "produto": "Arroz",
+      "tipo": "saida",
+      "quantidade": 90,
+      "observacao": "",
+      "data": "2026-11-18T11:24:49.104Z"
+    }
+  ]
+}
