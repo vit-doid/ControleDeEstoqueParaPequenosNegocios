@@ -5,14 +5,16 @@ import path from 'node:path';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const DATA_DIR = path.join(import.meta.dirname, 'data');
+// este arquivo fica em src/, então a raiz do projeto é um nível acima
+const ROOT = path.join(import.meta.dirname, '..');
+const PUBLIC_DIR = path.join(ROOT, 'public');
+const DATA_DIR = process.env.DATA_DIR ? path.resolve(process.env.DATA_DIR) : path.join(ROOT, 'data');
 const DB_FILE = path.join(DATA_DIR, 'estoque.json');
 
 app.use(express.json());
-app.use(express.static(path.join(import.meta.dirname, 'public')));
+app.use(express.static(PUBLIC_DIR));
 
-
-// "Banco de dados"
+// ---------- "Banco de dados" em arquivo JSON ----------
 function carregar() {
   try {
     return JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
@@ -25,7 +27,7 @@ function salvar(db) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   const tmp = DB_FILE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(db, null, 2));
-  fs.renameSync(tmp, DB_FILE);
+  fs.renameSync(tmp, DB_FILE); // escrita atômica: evita arquivo corrompido
 }
 
 function lerProduto(body) {
@@ -47,18 +49,15 @@ function lerProduto(body) {
   return { p };
 }
 
-
-//Rota de verificação (a sua original)
+// ---------- Verificação ----------
 app.get('/ok', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-
-//Produtos 
+// ---------- Produtos ----------
 app.get('/api/produtos', (req, res) => {
   res.json(carregar().produtos);
 });
-
 
 app.post('/api/produtos', (req, res) => {
   const { p, erro } = lerProduto(req.body);
@@ -86,8 +85,7 @@ app.put('/api/produtos/:id', (req, res) => {
   if (!produto) return res.status(404).json({ erro: 'Produto não encontrado.' });
   if (p.codigo && db.produtos.some((x) => x.codigo === p.codigo && x.id !== produto.id))
     return res.status(409).json({ erro: 'Já existe um produto com esse código.' });
-  
-
+  // a quantidade só muda por movimentações, para manter o histórico fiel
   Object.assign(produto, { ...p, quantidade: produto.quantidade });
   salvar(db);
   res.json(produto);
@@ -102,7 +100,7 @@ app.delete('/api/produtos/:id', (req, res) => {
   res.status(204).end();
 });
 
-// Movimentações (entrada / saída)
+// ---------- Movimentações (entrada / saída) ----------
 app.post('/api/produtos/:id/movimentacoes', (req, res) => {
   const { tipo, observacao } = req.body;
   const qtd = Number(req.body.quantidade);
@@ -126,7 +124,7 @@ app.get('/api/movimentacoes', (req, res) => {
   res.json(carregar().movimentacoes.slice().reverse().slice(0, 200));
 });
 
-
+// ---------- Resumo ----------
 app.get('/api/resumo', (req, res) => {
   const { produtos } = carregar();
   res.json({
@@ -140,4 +138,7 @@ app.get('/api/resumo', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
+  if (!fs.existsSync(path.join(PUBLIC_DIR, 'index.html'))) {
+    console.warn(`ATENÇÃO: não encontrei ${path.join(PUBLIC_DIR, 'index.html')}. A tela não vai abrir (Cannot GET /).`);
+  }
 });
