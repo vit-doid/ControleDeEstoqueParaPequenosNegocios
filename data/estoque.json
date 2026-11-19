@@ -1,5 +1,5 @@
 {
-  "proximoId": 2,
+  "proximoId": 102,
   "produtos": [
     {
       "id": 1,
@@ -11,6 +11,1106 @@
       "custo": 3,
       "preco": 6,
       "criadoEm": "2026-11-18T11:24:30.297Z"
+    },
+    {
+      "id": 2,
+      "nome": "Caneta Esferográfica Azul",
+      "codigo": "PAP-001",
+      "categoria": "Papelaria",
+      "quantidade": 31,
+      "minimo": 5,
+      "custo": 0.8,
+      "preco": 1.9,
+      "criadoEm": "2026-11-19T14:15:41.173Z"
+    },
+    {
+      "id": 3,
+      "nome": "Caneta Esferográfica Preta",
+      "codigo": "PAP-002",
+      "categoria": "Papelaria",
+      "quantidade": 32,
+      "minimo": 12,
+      "custo": 0.8,
+      "preco": 1.9,
+      "criadoEm": "2026-11-19T14:15:41.210Z"
+    },
+    {
+      "id": 4,
+      "nome": "Lápis Preto HB",
+      "codigo": "PAP-003",
+      "categoria": "Papelaria",
+      "quantidade": 48,
+      "minimo": 8,
+      "custo": 0.5,
+      "preco": 0.9,
+      "criadoEm": "2026-11-19T14:15:41.218Z"
+    },
+    {
+      "id": 5,
+      "nome": "Borracha Branca",
+      "codigo": "PAP-004",
+      "categoria": "Papelaria",
+      "quantidade": 10,
+      "minimo": 5,
+      "custo": 0.9,
+      "preco": 1.9,
+      "criadoEm": "2026-11-19T14:15:41.244Z"
+    },
+    {
+      "id": 6,
+      "nome": "Caderno 100 Folhas",
+      "codigo": "PAP-005",
+      "categoria": "Papelaria",
+      "quantidade": 4,
+      "minimo": 5,
+      "custo": 9.5,
+      "preco": 13.9,
+      "criadoEm": "2026-11-19T14:15:41.261Z"
+    },
+    {
+      "id": 7,
+      "nome": "Caderno 200 Folhas",
+      "codigo": "PAP-006",
+      "categoria": "Papelaria",
+      "quantidade": 64,
+      "minimo": 25,
+      "custo": 15,
+      "preco": 21.9,
+      "criadoEm": "2026-11-19T14:15:41.277Z"
+    },
+    {
+      "id": 8,
+      "nome": "Bloco de Notas Adesivas",
+      "codigo": "PAP-007",
+      "categoria": "Papelaria",
+      "quantidade": 14,
+      "minimo": 15,
+      "custo": 4.2,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.298Z"
+    },
+    {
+      "id": 9,
+      "nome": "Régua 30cm",
+      "codigo": "PAP-008",
+      "categoria": "Papelaria",
+      "quantidade": 47,
+      "minimo": 10,
+      "custo": 2.1,
+      "preco": 3.9,
+      "criadoEm": "2026-11-19T14:15:41.332Z"
+    },
+    {
+      "id": 10,
+      "nome": "Cola Bastão 20g",
+      "codigo": "PAP-009",
+      "categoria": "Papelaria",
+      "quantidade": 26,
+      "minimo": 15,
+      "custo": 3,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.363Z"
+    },
+    {
+      "id": 11,
+      "nome": "Marca-Texto Amarelo",
+      "codigo": "PAP-010",
+      "categoria": "Papelaria",
+      "quantidade": 33,
+      "minimo": 20,
+      "custo": 2.4,
+      "preco": 3.9,
+      "criadoEm": "2026-11-19T14:15:41.396Z"
+    },
+    {
+      "id": 12,
+      "nome": "Mouse USB",
+      "codigo": "INF-001",
+      "categoria": "Informática",
+      "quantidade": 33,
+      "minimo": 8,
+      "custo": 18,
+      "preco": 25.9,
+      "criadoEm": "2026-11-19T14:15:41.413Z"
+    },
+    {
+      "id": 13,
+      "nome": "Teclado USB ABNT2",
+      "codigo": "INF-002",
+      "categoria": "Informática",
+      "quantidade": 16,
+      "minimo": 15,
+      "custo": 42,
+      "preco": 72.9,
+      "criadoEm": "2026-11-19T14:15:41.435Z"
+    },
+    {
+      "id": 14,
+      "nome": "Pen Drive 32GB",
+      "codigo": "INF-003",
+      "categoria": "Informática",
+      "quantidade": 30,
+      "minimo": 8,
+      "custo": 24,
+      "preco": 40.9,
+      "criadoEm": "2026-11-19T14:15:41.464Z"
+    },
+    {
+      "id": 15,
+      "nome": "Pen Drive 64GB",
+      "codigo": "INF-004",
+      "categoria": "Informática",
+      "quantidade": 98,
+      "minimo": 15,
+      "custo": 36,
+      "preco": 49.9,
+      "criadoEm": "2026-11-19T14:15:41.479Z"
+    },
+    {
+      "id": 16,
+      "nome": "Cabo HDMI 1,5m",
+      "codigo": "INF-005",
+      "categoria": "Informática",
+      "quantidade": 96,
+      "minimo": 20,
+      "custo": 14,
+      "preco": 22.9,
+      "criadoEm": "2026-11-19T14:15:41.495Z"
+    },
+    {
+      "id": 17,
+      "nome": "Cabo USB-C 1m",
+      "codigo": "INF-006",
+      "categoria": "Informática",
+      "quantidade": 9,
+      "minimo": 8,
+      "custo": 11,
+      "preco": 15.9,
+      "criadoEm": "2026-11-19T14:15:41.500Z"
+    },
+    {
+      "id": 18,
+      "nome": "Webcam HD",
+      "codigo": "INF-007",
+      "categoria": "Informática",
+      "quantidade": 28,
+      "minimo": 15,
+      "custo": 65,
+      "preco": 107.9,
+      "criadoEm": "2026-11-19T14:15:41.507Z"
+    },
+    {
+      "id": 19,
+      "nome": "Fone de Ouvido com Microfone",
+      "codigo": "INF-008",
+      "categoria": "Informática",
+      "quantidade": 6,
+      "minimo": 8,
+      "custo": 30,
+      "preco": 52.9,
+      "criadoEm": "2026-11-19T14:15:41.514Z"
+    },
+    {
+      "id": 20,
+      "nome": "Mousepad Comum",
+      "codigo": "INF-009",
+      "categoria": "Informática",
+      "quantidade": 19,
+      "minimo": 20,
+      "custo": 7,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.536Z"
+    },
+    {
+      "id": 21,
+      "nome": "Hub USB 4 Portas",
+      "codigo": "INF-010",
+      "categoria": "Informática",
+      "quantidade": 34,
+      "minimo": 12,
+      "custo": 28,
+      "preco": 42.9,
+      "criadoEm": "2026-11-19T14:15:41.559Z"
+    },
+    {
+      "id": 22,
+      "nome": "Detergente Neutro 500ml",
+      "codigo": "LMP-001",
+      "categoria": "Limpeza",
+      "quantidade": 49,
+      "minimo": 8,
+      "custo": 1.8,
+      "preco": 2.99,
+      "criadoEm": "2026-11-19T14:15:41.566Z"
+    },
+    {
+      "id": 23,
+      "nome": "Água Sanitária 1L",
+      "codigo": "LMP-002",
+      "categoria": "Limpeza",
+      "quantidade": 35,
+      "minimo": 12,
+      "custo": 3.2,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:41.594Z"
+    },
+    {
+      "id": 24,
+      "nome": "Desinfetante Lavanda 2L",
+      "codigo": "LMP-003",
+      "categoria": "Limpeza",
+      "quantidade": 99,
+      "minimo": 15,
+      "custo": 6.5,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.600Z"
+    },
+    {
+      "id": 25,
+      "nome": "Sabão em Pó 1kg",
+      "codigo": "LMP-004",
+      "categoria": "Limpeza",
+      "quantidade": 48,
+      "minimo": 12,
+      "custo": 9,
+      "preco": 14.99,
+      "criadoEm": "2026-11-19T14:15:41.606Z"
+    },
+    {
+      "id": 26,
+      "nome": "Amaciante 2L",
+      "codigo": "LMP-005",
+      "categoria": "Limpeza",
+      "quantidade": 15,
+      "minimo": 5,
+      "custo": 8.5,
+      "preco": 14.9,
+      "criadoEm": "2026-11-19T14:15:41.625Z"
+    },
+    {
+      "id": 27,
+      "nome": "Esponja Multiuso",
+      "codigo": "LMP-006",
+      "categoria": "Limpeza",
+      "quantidade": 74,
+      "minimo": 20,
+      "custo": 1.2,
+      "preco": 2.9,
+      "criadoEm": "2026-11-19T14:15:41.651Z"
+    },
+    {
+      "id": 28,
+      "nome": "Pano de Chão",
+      "codigo": "LMP-007",
+      "categoria": "Limpeza",
+      "quantidade": 55,
+      "minimo": 12,
+      "custo": 3.8,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:41.658Z"
+    },
+    {
+      "id": 29,
+      "nome": "Saco de Lixo 50L (10un)",
+      "codigo": "LMP-008",
+      "categoria": "Limpeza",
+      "quantidade": 101,
+      "minimo": 30,
+      "custo": 5.5,
+      "preco": 7.99,
+      "criadoEm": "2026-11-19T14:15:41.663Z"
+    },
+    {
+      "id": 30,
+      "nome": "Álcool 70% 1L",
+      "codigo": "LMP-009",
+      "categoria": "Limpeza",
+      "quantidade": 67,
+      "minimo": 30,
+      "custo": 6,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.668Z"
+    },
+    {
+      "id": 31,
+      "nome": "Multiuso 500ml",
+      "codigo": "LMP-010",
+      "categoria": "Limpeza",
+      "quantidade": 83,
+      "minimo": 12,
+      "custo": 4.2,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.673Z"
+    },
+    {
+      "id": 32,
+      "nome": "Arroz Branco 5kg",
+      "codigo": "ALI-001",
+      "categoria": "Alimentos",
+      "quantidade": 94,
+      "minimo": 25,
+      "custo": 22,
+      "preco": 32.9,
+      "criadoEm": "2026-11-19T14:15:41.680Z"
+    },
+    {
+      "id": 33,
+      "nome": "Feijão Carioca 1kg",
+      "codigo": "ALI-002",
+      "categoria": "Alimentos",
+      "quantidade": 45,
+      "minimo": 10,
+      "custo": 6.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:41.686Z"
+    },
+    {
+      "id": 34,
+      "nome": "Açúcar Refinado 1kg",
+      "codigo": "ALI-003",
+      "categoria": "Alimentos",
+      "quantidade": 35,
+      "minimo": 5,
+      "custo": 3.8,
+      "preco": 5.99,
+      "criadoEm": "2026-11-19T14:15:41.693Z"
+    },
+    {
+      "id": 35,
+      "nome": "Café Torrado 500g",
+      "codigo": "ALI-004",
+      "categoria": "Alimentos",
+      "quantidade": 63,
+      "minimo": 10,
+      "custo": 12,
+      "preco": 16.9,
+      "criadoEm": "2026-11-19T14:15:41.702Z"
+    },
+    {
+      "id": 36,
+      "nome": "Macarrão Espaguete 500g",
+      "codigo": "ALI-005",
+      "categoria": "Alimentos",
+      "quantidade": 35,
+      "minimo": 8,
+      "custo": 3.2,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:41.707Z"
+    },
+    {
+      "id": 37,
+      "nome": "Óleo de Soja 900ml",
+      "codigo": "ALI-006",
+      "categoria": "Alimentos",
+      "quantidade": 112,
+      "minimo": 30,
+      "custo": 6.8,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.715Z"
+    },
+    {
+      "id": 38,
+      "nome": "Farinha de Trigo 1kg",
+      "codigo": "ALI-007",
+      "categoria": "Alimentos",
+      "quantidade": 3,
+      "minimo": 5,
+      "custo": 4.3,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.720Z"
+    },
+    {
+      "id": 39,
+      "nome": "Sal Refinado 1kg",
+      "codigo": "ALI-008",
+      "categoria": "Alimentos",
+      "quantidade": 96,
+      "minimo": 15,
+      "custo": 1.9,
+      "preco": 3.9,
+      "criadoEm": "2026-11-19T14:15:41.727Z"
+    },
+    {
+      "id": 40,
+      "nome": "Biscoito Cream Cracker",
+      "codigo": "ALI-009",
+      "categoria": "Alimentos",
+      "quantidade": 73,
+      "minimo": 15,
+      "custo": 3,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.733Z"
+    },
+    {
+      "id": 41,
+      "nome": "Leite Integral 1L",
+      "codigo": "ALI-010",
+      "categoria": "Alimentos",
+      "quantidade": 3,
+      "minimo": 5,
+      "custo": 4.2,
+      "preco": 5.99,
+      "criadoEm": "2026-11-19T14:15:41.738Z"
+    },
+    {
+      "id": 42,
+      "nome": "Água Mineral 500ml",
+      "codigo": "BEB-001",
+      "categoria": "Bebidas",
+      "quantidade": 59,
+      "minimo": 15,
+      "custo": 0.9,
+      "preco": 1.9,
+      "criadoEm": "2026-11-19T14:15:41.743Z"
+    },
+    {
+      "id": 43,
+      "nome": "Água Mineral 1,5L",
+      "codigo": "BEB-002",
+      "categoria": "Bebidas",
+      "quantidade": 37,
+      "minimo": 8,
+      "custo": 1.6,
+      "preco": 2.9,
+      "criadoEm": "2026-11-19T14:15:41.748Z"
+    },
+    {
+      "id": 44,
+      "nome": "Refrigerante Cola 2L",
+      "codigo": "BEB-003",
+      "categoria": "Bebidas",
+      "quantidade": 34,
+      "minimo": 12,
+      "custo": 5.5,
+      "preco": 8.9,
+      "criadoEm": "2026-11-19T14:15:41.754Z"
+    },
+    {
+      "id": 45,
+      "nome": "Refrigerante Guaraná 2L",
+      "codigo": "BEB-004",
+      "categoria": "Bebidas",
+      "quantidade": 8,
+      "minimo": 10,
+      "custo": 5.2,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.761Z"
+    },
+    {
+      "id": 46,
+      "nome": "Suco de Laranja 1L",
+      "codigo": "BEB-005",
+      "categoria": "Bebidas",
+      "quantidade": 27,
+      "minimo": 5,
+      "custo": 5.8,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.767Z"
+    },
+    {
+      "id": 47,
+      "nome": "Suco de Uva 1L",
+      "codigo": "BEB-006",
+      "categoria": "Bebidas",
+      "quantidade": 8,
+      "minimo": 5,
+      "custo": 6.2,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:41.774Z"
+    },
+    {
+      "id": 48,
+      "nome": "Chá Gelado 450ml",
+      "codigo": "BEB-007",
+      "categoria": "Bebidas",
+      "quantidade": 32,
+      "minimo": 15,
+      "custo": 3.2,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:41.781Z"
+    },
+    {
+      "id": 49,
+      "nome": "Energético 250ml",
+      "codigo": "BEB-008",
+      "categoria": "Bebidas",
+      "quantidade": 16,
+      "minimo": 8,
+      "custo": 5.5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.794Z"
+    },
+    {
+      "id": 50,
+      "nome": "Água de Coco 1L",
+      "codigo": "BEB-009",
+      "categoria": "Bebidas",
+      "quantidade": 45,
+      "minimo": 8,
+      "custo": 6,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:41.801Z"
+    },
+    {
+      "id": 51,
+      "nome": "Isotônico 500ml",
+      "codigo": "BEB-010",
+      "categoria": "Bebidas",
+      "quantidade": 55,
+      "minimo": 10,
+      "custo": 3.8,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.810Z"
+    },
+    {
+      "id": 52,
+      "nome": "Sabonete 90g",
+      "codigo": "HIG-001",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 21,
+      "minimo": 10,
+      "custo": 1.4,
+      "preco": 2.9,
+      "criadoEm": "2026-11-19T14:15:41.817Z"
+    },
+    {
+      "id": 53,
+      "nome": "Shampoo 350ml",
+      "codigo": "HIG-002",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 82,
+      "minimo": 25,
+      "custo": 9.5,
+      "preco": 15.9,
+      "criadoEm": "2026-11-19T14:15:41.823Z"
+    },
+    {
+      "id": 54,
+      "nome": "Condicionador 350ml",
+      "codigo": "HIG-003",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 51,
+      "minimo": 12,
+      "custo": 9.8,
+      "preco": 17.9,
+      "criadoEm": "2026-11-19T14:15:41.831Z"
+    },
+    {
+      "id": 55,
+      "nome": "Creme Dental 90g",
+      "codigo": "HIG-004",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 65,
+      "minimo": 20,
+      "custo": 3.2,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.837Z"
+    },
+    {
+      "id": 56,
+      "nome": "Escova de Dentes",
+      "codigo": "HIG-005",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 43,
+      "minimo": 30,
+      "custo": 3.5,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.842Z"
+    },
+    {
+      "id": 57,
+      "nome": "Desodorante Aerosol",
+      "codigo": "HIG-006",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 29,
+      "minimo": 8,
+      "custo": 8.5,
+      "preco": 12.9,
+      "criadoEm": "2026-11-19T14:15:41.848Z"
+    },
+    {
+      "id": 58,
+      "nome": "Papel Higiênico 12 Rolos",
+      "codigo": "HIG-007",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 43,
+      "minimo": 12,
+      "custo": 14,
+      "preco": 19.9,
+      "criadoEm": "2026-11-19T14:15:41.854Z"
+    },
+    {
+      "id": 59,
+      "nome": "Fio Dental 50m",
+      "codigo": "HIG-008",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 15,
+      "minimo": 5,
+      "custo": 3,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.859Z"
+    },
+    {
+      "id": 60,
+      "nome": "Absorvente 8un",
+      "codigo": "HIG-009",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 33,
+      "minimo": 5,
+      "custo": 3.6,
+      "preco": 4.99,
+      "criadoEm": "2026-11-19T14:15:41.866Z"
+    },
+    {
+      "id": 61,
+      "nome": "Cotonete 150un",
+      "codigo": "HIG-010",
+      "categoria": "Higiene Pessoal",
+      "quantidade": 50,
+      "minimo": 12,
+      "custo": 3.1,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.871Z"
+    },
+    {
+      "id": 62,
+      "nome": "Pilha AA (par)",
+      "codigo": "ELE-001",
+      "categoria": "Eletrônicos",
+      "quantidade": 84,
+      "minimo": 12,
+      "custo": 4,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:41.877Z"
+    },
+    {
+      "id": 63,
+      "nome": "Pilha AAA (par)",
+      "codigo": "ELE-002",
+      "categoria": "Eletrônicos",
+      "quantidade": 95,
+      "minimo": 30,
+      "custo": 4,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:41.887Z"
+    },
+    {
+      "id": 64,
+      "nome": "Carregador Veicular USB",
+      "codigo": "ELE-003",
+      "categoria": "Eletrônicos",
+      "quantidade": 71,
+      "minimo": 25,
+      "custo": 12,
+      "preco": 20.9,
+      "criadoEm": "2026-11-19T14:15:41.901Z"
+    },
+    {
+      "id": 65,
+      "nome": "Fonte Carregador 5V",
+      "codigo": "ELE-004",
+      "categoria": "Eletrônicos",
+      "quantidade": 118,
+      "minimo": 25,
+      "custo": 15,
+      "preco": 20.9,
+      "criadoEm": "2026-11-19T14:15:41.907Z"
+    },
+    {
+      "id": 66,
+      "nome": "Caixa de Som Bluetooth",
+      "codigo": "ELE-005",
+      "categoria": "Eletrônicos",
+      "quantidade": 44,
+      "minimo": 30,
+      "custo": 55,
+      "preco": 84.9,
+      "criadoEm": "2026-11-19T14:15:41.917Z"
+    },
+    {
+      "id": 67,
+      "nome": "Lâmpada LED 9W",
+      "codigo": "ELE-006",
+      "categoria": "Eletrônicos",
+      "quantidade": 14,
+      "minimo": 8,
+      "custo": 4.5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.923Z"
+    },
+    {
+      "id": 68,
+      "nome": "Extensão 3 Tomadas 3m",
+      "codigo": "ELE-007",
+      "categoria": "Eletrônicos",
+      "quantidade": 125,
+      "minimo": 20,
+      "custo": 16,
+      "preco": 24.9,
+      "criadoEm": "2026-11-19T14:15:41.930Z"
+    },
+    {
+      "id": 69,
+      "nome": "Filtro de Linha 5 Tomadas",
+      "codigo": "ELE-008",
+      "categoria": "Eletrônicos",
+      "quantidade": 32,
+      "minimo": 12,
+      "custo": 28,
+      "preco": 48.9,
+      "criadoEm": "2026-11-19T14:15:41.936Z"
+    },
+    {
+      "id": 70,
+      "nome": "Fita LED 5m",
+      "codigo": "ELE-009",
+      "categoria": "Eletrônicos",
+      "quantidade": 65,
+      "minimo": 30,
+      "custo": 32,
+      "preco": 45.99,
+      "criadoEm": "2026-11-19T14:15:41.942Z"
+    },
+    {
+      "id": 71,
+      "nome": "Adaptador de Tomada",
+      "codigo": "ELE-010",
+      "categoria": "Eletrônicos",
+      "quantidade": 77,
+      "minimo": 15,
+      "custo": 5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.949Z"
+    },
+    {
+      "id": 72,
+      "nome": "Copo de Vidro 300ml",
+      "codigo": "UTD-001",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 27,
+      "minimo": 8,
+      "custo": 2.8,
+      "preco": 4.9,
+      "criadoEm": "2026-11-19T14:15:41.955Z"
+    },
+    {
+      "id": 73,
+      "nome": "Prato Raso de Vidro",
+      "codigo": "UTD-002",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 11,
+      "minimo": 8,
+      "custo": 4.5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.963Z"
+    },
+    {
+      "id": 74,
+      "nome": "Jogo de Talheres 24 Peças",
+      "codigo": "UTD-003",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 9,
+      "minimo": 5,
+      "custo": 32,
+      "preco": 52.9,
+      "criadoEm": "2026-11-19T14:15:41.969Z"
+    },
+    {
+      "id": 75,
+      "nome": "Garrafa Térmica 1L",
+      "codigo": "UTD-004",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 36,
+      "minimo": 12,
+      "custo": 38,
+      "preco": 67.9,
+      "criadoEm": "2026-11-19T14:15:41.976Z"
+    },
+    {
+      "id": 76,
+      "nome": "Pote Plástico 1L",
+      "codigo": "UTD-005",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 63,
+      "minimo": 30,
+      "custo": 5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:41.984Z"
+    },
+    {
+      "id": 77,
+      "nome": "Panela de Pressão 4,5L",
+      "codigo": "UTD-006",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 11,
+      "minimo": 5,
+      "custo": 75,
+      "preco": 130.9,
+      "criadoEm": "2026-11-19T14:15:41.990Z"
+    },
+    {
+      "id": 78,
+      "nome": "Escorredor de Louça",
+      "codigo": "UTD-007",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 95,
+      "minimo": 25,
+      "custo": 22,
+      "preco": 33.9,
+      "criadoEm": "2026-11-19T14:15:42.004Z"
+    },
+    {
+      "id": 79,
+      "nome": "Vassoura",
+      "codigo": "UTD-008",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 77,
+      "minimo": 30,
+      "custo": 9,
+      "preco": 15.99,
+      "criadoEm": "2026-11-19T14:15:42.011Z"
+    },
+    {
+      "id": 80,
+      "nome": "Rodo 40cm",
+      "codigo": "UTD-009",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 72,
+      "minimo": 30,
+      "custo": 11,
+      "preco": 16.99,
+      "criadoEm": "2026-11-19T14:15:42.017Z"
+    },
+    {
+      "id": 81,
+      "nome": "Balde 10L",
+      "codigo": "UTD-010",
+      "categoria": "Utilidades Domésticas",
+      "quantidade": 22,
+      "minimo": 12,
+      "custo": 6.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.023Z"
+    },
+    {
+      "id": 82,
+      "nome": "Quebra-Cabeça 100 Peças",
+      "codigo": "BRQ-001",
+      "categoria": "Brinquedos",
+      "quantidade": 24,
+      "minimo": 5,
+      "custo": 9,
+      "preco": 14.9,
+      "criadoEm": "2026-11-19T14:15:42.030Z"
+    },
+    {
+      "id": 83,
+      "nome": "Carrinho de Fricção",
+      "codigo": "BRQ-002",
+      "categoria": "Brinquedos",
+      "quantidade": 26,
+      "minimo": 5,
+      "custo": 6.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.035Z"
+    },
+    {
+      "id": 84,
+      "nome": "Boneca de Pano",
+      "codigo": "BRQ-003",
+      "categoria": "Brinquedos",
+      "quantidade": 16,
+      "minimo": 10,
+      "custo": 14,
+      "preco": 21.99,
+      "criadoEm": "2026-11-19T14:15:42.040Z"
+    },
+    {
+      "id": 85,
+      "nome": "Bola de Plástico",
+      "codigo": "BRQ-004",
+      "categoria": "Brinquedos",
+      "quantidade": 6,
+      "minimo": 8,
+      "custo": 5,
+      "preco": 8.99,
+      "criadoEm": "2026-11-19T14:15:42.048Z"
+    },
+    {
+      "id": 86,
+      "nome": "Jogo da Memória",
+      "codigo": "BRQ-005",
+      "categoria": "Brinquedos",
+      "quantidade": 54,
+      "minimo": 8,
+      "custo": 8,
+      "preco": 11.9,
+      "criadoEm": "2026-11-19T14:15:42.076Z"
+    },
+    {
+      "id": 87,
+      "nome": "Massinha de Modelar 6 Cores",
+      "codigo": "BRQ-006",
+      "categoria": "Brinquedos",
+      "quantidade": 47,
+      "minimo": 25,
+      "custo": 5.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.081Z"
+    },
+    {
+      "id": 88,
+      "nome": "Blocos de Montar 50 Peças",
+      "codigo": "BRQ-007",
+      "categoria": "Brinquedos",
+      "quantidade": 20,
+      "minimo": 12,
+      "custo": 18,
+      "preco": 31.99,
+      "criadoEm": "2026-11-19T14:15:42.087Z"
+    },
+    {
+      "id": 89,
+      "nome": "Lápis de Cor 12 Cores",
+      "codigo": "BRQ-008",
+      "categoria": "Brinquedos",
+      "quantidade": 172,
+      "minimo": 25,
+      "custo": 6,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.103Z"
+    },
+    {
+      "id": 90,
+      "nome": "Giz de Cera 12 Cores",
+      "codigo": "BRQ-009",
+      "categoria": "Brinquedos",
+      "quantidade": 44,
+      "minimo": 15,
+      "custo": 3.8,
+      "preco": 6.9,
+      "criadoEm": "2026-11-19T14:15:42.111Z"
+    },
+    {
+      "id": 91,
+      "nome": "Baralho",
+      "codigo": "BRQ-010",
+      "categoria": "Brinquedos",
+      "quantidade": 38,
+      "minimo": 20,
+      "custo": 4.5,
+      "preco": 7.9,
+      "criadoEm": "2026-11-19T14:15:42.120Z"
+    },
+    {
+      "id": 92,
+      "nome": "Martelo 25mm",
+      "codigo": "FER-001",
+      "categoria": "Ferramentas",
+      "quantidade": 43,
+      "minimo": 10,
+      "custo": 16,
+      "preco": 23.9,
+      "criadoEm": "2026-11-19T14:15:42.131Z"
+    },
+    {
+      "id": 93,
+      "nome": "Chave de Fenda",
+      "codigo": "FER-002",
+      "categoria": "Ferramentas",
+      "quantidade": 113,
+      "minimo": 30,
+      "custo": 5.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.139Z"
+    },
+    {
+      "id": 94,
+      "nome": "Chave Phillips",
+      "codigo": "FER-003",
+      "categoria": "Ferramentas",
+      "quantidade": 9,
+      "minimo": 8,
+      "custo": 5.5,
+      "preco": 9.9,
+      "criadoEm": "2026-11-19T14:15:42.161Z"
+    },
+    {
+      "id": 95,
+      "nome": "Alicate Universal",
+      "codigo": "FER-004",
+      "categoria": "Ferramentas",
+      "quantidade": 15,
+      "minimo": 8,
+      "custo": 18,
+      "preco": 28.9,
+      "criadoEm": "2026-11-19T14:15:42.167Z"
+    },
+    {
+      "id": 96,
+      "nome": "Trena 5m",
+      "codigo": "FER-005",
+      "categoria": "Ferramentas",
+      "quantidade": 34,
+      "minimo": 15,
+      "custo": 12,
+      "preco": 19.9,
+      "criadoEm": "2026-11-19T14:15:42.173Z"
+    },
+    {
+      "id": 97,
+      "nome": "Fita Isolante 10m",
+      "codigo": "FER-006",
+      "categoria": "Ferramentas",
+      "quantidade": 25,
+      "minimo": 8,
+      "custo": 3.2,
+      "preco": 5.9,
+      "criadoEm": "2026-11-19T14:15:42.181Z"
+    },
+    {
+      "id": 98,
+      "nome": "Parafusos 100un",
+      "codigo": "FER-007",
+      "categoria": "Ferramentas",
+      "quantidade": 28,
+      "minimo": 10,
+      "custo": 7,
+      "preco": 10.9,
+      "criadoEm": "2026-11-19T14:15:42.187Z"
+    },
+    {
+      "id": 99,
+      "nome": "Chave Inglesa",
+      "codigo": "FER-008",
+      "categoria": "Ferramentas",
+      "quantidade": 71,
+      "minimo": 15,
+      "custo": 24,
+      "preco": 41.9,
+      "criadoEm": "2026-11-19T14:15:42.193Z"
+    },
+    {
+      "id": 100,
+      "nome": "Serrote 18\"",
+      "codigo": "FER-009",
+      "categoria": "Ferramentas",
+      "quantidade": 29,
+      "minimo": 5,
+      "custo": 20,
+      "preco": 35.9,
+      "criadoEm": "2026-11-19T14:15:42.200Z"
+    },
+    {
+      "id": 101,
+      "nome": "Nível de Bolha",
+      "codigo": "FER-010",
+      "categoria": "Ferramentas",
+      "quantidade": 102,
+      "minimo": 15,
+      "custo": 9,
+      "preco": 15.9,
+      "criadoEm": "2026-11-19T14:15:42.206Z"
     }
   ],
   "movimentacoes": [
@@ -31,6 +1131,1356 @@
       "quantidade": 90,
       "observacao": "",
       "data": "2026-11-18T11:24:49.104Z"
+    },
+    {
+      "id": 1795097741174,
+      "produtoId": 2,
+      "produto": "Caneta Esferográfica Azul",
+      "tipo": "entrada",
+      "quantidade": 31,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.174Z"
+    },
+    {
+      "id": 1795097741210,
+      "produtoId": 3,
+      "produto": "Caneta Esferográfica Preta",
+      "tipo": "entrada",
+      "quantidade": 32,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.210Z"
+    },
+    {
+      "id": 1795097741218,
+      "produtoId": 4,
+      "produto": "Lápis Preto HB",
+      "tipo": "entrada",
+      "quantidade": 48,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.218Z"
+    },
+    {
+      "id": 1795097741244,
+      "produtoId": 5,
+      "produto": "Borracha Branca",
+      "tipo": "entrada",
+      "quantidade": 10,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.244Z"
+    },
+    {
+      "id": 1795097741261,
+      "produtoId": 6,
+      "produto": "Caderno 100 Folhas",
+      "tipo": "entrada",
+      "quantidade": 25,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.261Z"
+    },
+    {
+      "id": 1795097741277,
+      "produtoId": 7,
+      "produto": "Caderno 200 Folhas",
+      "tipo": "entrada",
+      "quantidade": 84,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.277Z"
+    },
+    {
+      "id": 1795097741298,
+      "produtoId": 8,
+      "produto": "Bloco de Notas Adesivas",
+      "tipo": "entrada",
+      "quantidade": 18,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.298Z"
+    },
+    {
+      "id": 1795097741332,
+      "produtoId": 9,
+      "produto": "Régua 30cm",
+      "tipo": "entrada",
+      "quantidade": 57,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.332Z"
+    },
+    {
+      "id": 1795097741363,
+      "produtoId": 10,
+      "produto": "Cola Bastão 20g",
+      "tipo": "entrada",
+      "quantidade": 37,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.363Z"
+    },
+    {
+      "id": 1795097741396,
+      "produtoId": 11,
+      "produto": "Marca-Texto Amarelo",
+      "tipo": "entrada",
+      "quantidade": 36,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.396Z"
+    },
+    {
+      "id": 1795097741413,
+      "produtoId": 12,
+      "produto": "Mouse USB",
+      "tipo": "entrada",
+      "quantidade": 33,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.413Z"
+    },
+    {
+      "id": 1795097741435,
+      "produtoId": 13,
+      "produto": "Teclado USB ABNT2",
+      "tipo": "entrada",
+      "quantidade": 23,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.435Z"
+    },
+    {
+      "id": 1795097741464,
+      "produtoId": 14,
+      "produto": "Pen Drive 32GB",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.464Z"
+    },
+    {
+      "id": 1795097741479,
+      "produtoId": 15,
+      "produto": "Pen Drive 64GB",
+      "tipo": "entrada",
+      "quantidade": 98,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.479Z"
+    },
+    {
+      "id": 1795097741495,
+      "produtoId": 16,
+      "produto": "Cabo HDMI 1,5m",
+      "tipo": "entrada",
+      "quantidade": 96,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.495Z"
+    },
+    {
+      "id": 1795097741500,
+      "produtoId": 17,
+      "produto": "Cabo USB-C 1m",
+      "tipo": "entrada",
+      "quantidade": 13,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.500Z"
+    },
+    {
+      "id": 1795097741507,
+      "produtoId": 18,
+      "produto": "Webcam HD",
+      "tipo": "entrada",
+      "quantidade": 28,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.507Z"
+    },
+    {
+      "id": 1795097741514,
+      "produtoId": 19,
+      "produto": "Fone de Ouvido com Microfone",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.514Z"
+    },
+    {
+      "id": 1795097741536,
+      "produtoId": 20,
+      "produto": "Mousepad Comum",
+      "tipo": "entrada",
+      "quantidade": 43,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.536Z"
+    },
+    {
+      "id": 1795097741559,
+      "produtoId": 21,
+      "produto": "Hub USB 4 Portas",
+      "tipo": "entrada",
+      "quantidade": 49,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.559Z"
+    },
+    {
+      "id": 1795097741566,
+      "produtoId": 22,
+      "produto": "Detergente Neutro 500ml",
+      "tipo": "entrada",
+      "quantidade": 49,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.566Z"
+    },
+    {
+      "id": 1795097741594,
+      "produtoId": 23,
+      "produto": "Água Sanitária 1L",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.594Z"
+    },
+    {
+      "id": 1795097741600,
+      "produtoId": 24,
+      "produto": "Desinfetante Lavanda 2L",
+      "tipo": "entrada",
+      "quantidade": 99,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.600Z"
+    },
+    {
+      "id": 1795097741606,
+      "produtoId": 25,
+      "produto": "Sabão em Pó 1kg",
+      "tipo": "entrada",
+      "quantidade": 56,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.606Z"
+    },
+    {
+      "id": 1795097741625,
+      "produtoId": 26,
+      "produto": "Amaciante 2L",
+      "tipo": "entrada",
+      "quantidade": 15,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.625Z"
+    },
+    {
+      "id": 1795097741651,
+      "produtoId": 27,
+      "produto": "Esponja Multiuso",
+      "tipo": "entrada",
+      "quantidade": 74,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.651Z"
+    },
+    {
+      "id": 1795097741658,
+      "produtoId": 28,
+      "produto": "Pano de Chão",
+      "tipo": "entrada",
+      "quantidade": 55,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.658Z"
+    },
+    {
+      "id": 1795097741663,
+      "produtoId": 29,
+      "produto": "Saco de Lixo 50L (10un)",
+      "tipo": "entrada",
+      "quantidade": 134,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.663Z"
+    },
+    {
+      "id": 1795097741668,
+      "produtoId": 30,
+      "produto": "Álcool 70% 1L",
+      "tipo": "entrada",
+      "quantidade": 69,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.668Z"
+    },
+    {
+      "id": 1795097741674,
+      "produtoId": 31,
+      "produto": "Multiuso 500ml",
+      "tipo": "entrada",
+      "quantidade": 83,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.674Z"
+    },
+    {
+      "id": 1795097741680,
+      "produtoId": 32,
+      "produto": "Arroz Branco 5kg",
+      "tipo": "entrada",
+      "quantidade": 130,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.680Z"
+    },
+    {
+      "id": 1795097741686,
+      "produtoId": 33,
+      "produto": "Feijão Carioca 1kg",
+      "tipo": "entrada",
+      "quantidade": 45,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.686Z"
+    },
+    {
+      "id": 1795097741693,
+      "produtoId": 34,
+      "produto": "Açúcar Refinado 1kg",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.693Z"
+    },
+    {
+      "id": 1795097741702,
+      "produtoId": 35,
+      "produto": "Café Torrado 500g",
+      "tipo": "entrada",
+      "quantidade": 63,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.702Z"
+    },
+    {
+      "id": 1795097741707,
+      "produtoId": 36,
+      "produto": "Macarrão Espaguete 500g",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.707Z"
+    },
+    {
+      "id": 1795097741715,
+      "produtoId": 37,
+      "produto": "Óleo de Soja 900ml",
+      "tipo": "entrada",
+      "quantidade": 168,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.715Z"
+    },
+    {
+      "id": 1795097741720,
+      "produtoId": 38,
+      "produto": "Farinha de Trigo 1kg",
+      "tipo": "entrada",
+      "quantidade": 29,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.720Z"
+    },
+    {
+      "id": 1795097741727,
+      "produtoId": 39,
+      "produto": "Sal Refinado 1kg",
+      "tipo": "entrada",
+      "quantidade": 100,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.727Z"
+    },
+    {
+      "id": 1795097741733,
+      "produtoId": 40,
+      "produto": "Biscoito Cream Cracker",
+      "tipo": "entrada",
+      "quantidade": 73,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.733Z"
+    },
+    {
+      "id": 1795097741738,
+      "produtoId": 41,
+      "produto": "Leite Integral 1L",
+      "tipo": "entrada",
+      "quantidade": 31,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.738Z"
+    },
+    {
+      "id": 1795097741743,
+      "produtoId": 42,
+      "produto": "Água Mineral 500ml",
+      "tipo": "entrada",
+      "quantidade": 82,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.743Z"
+    },
+    {
+      "id": 1795097741748,
+      "produtoId": 43,
+      "produto": "Água Mineral 1,5L",
+      "tipo": "entrada",
+      "quantidade": 51,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.748Z"
+    },
+    {
+      "id": 1795097741754,
+      "produtoId": 44,
+      "produto": "Refrigerante Cola 2L",
+      "tipo": "entrada",
+      "quantidade": 34,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.754Z"
+    },
+    {
+      "id": 1795097741761,
+      "produtoId": 45,
+      "produto": "Refrigerante Guaraná 2L",
+      "tipo": "entrada",
+      "quantidade": 47,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.761Z"
+    },
+    {
+      "id": 1795097741767,
+      "produtoId": 46,
+      "produto": "Suco de Laranja 1L",
+      "tipo": "entrada",
+      "quantidade": 27,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.767Z"
+    },
+    {
+      "id": 1795097741774,
+      "produtoId": 47,
+      "produto": "Suco de Uva 1L",
+      "tipo": "entrada",
+      "quantidade": 11,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.774Z"
+    },
+    {
+      "id": 1795097741781,
+      "produtoId": 48,
+      "produto": "Chá Gelado 450ml",
+      "tipo": "entrada",
+      "quantidade": 48,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.781Z"
+    },
+    {
+      "id": 1795097741794,
+      "produtoId": 49,
+      "produto": "Energético 250ml",
+      "tipo": "entrada",
+      "quantidade": 16,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.794Z"
+    },
+    {
+      "id": 1795097741801,
+      "produtoId": 50,
+      "produto": "Água de Coco 1L",
+      "tipo": "entrada",
+      "quantidade": 45,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.801Z"
+    },
+    {
+      "id": 1795097741810,
+      "produtoId": 51,
+      "produto": "Isotônico 500ml",
+      "tipo": "entrada",
+      "quantidade": 55,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.810Z"
+    },
+    {
+      "id": 1795097741817,
+      "produtoId": 52,
+      "produto": "Sabonete 90g",
+      "tipo": "entrada",
+      "quantidade": 29,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.817Z"
+    },
+    {
+      "id": 1795097741823,
+      "produtoId": 53,
+      "produto": "Shampoo 350ml",
+      "tipo": "entrada",
+      "quantidade": 82,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.823Z"
+    },
+    {
+      "id": 1795097741831,
+      "produtoId": 54,
+      "produto": "Condicionador 350ml",
+      "tipo": "entrada",
+      "quantidade": 54,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.831Z"
+    },
+    {
+      "id": 1795097741837,
+      "produtoId": 55,
+      "produto": "Creme Dental 90g",
+      "tipo": "entrada",
+      "quantidade": 79,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.837Z"
+    },
+    {
+      "id": 1795097741842,
+      "produtoId": 56,
+      "produto": "Escova de Dentes",
+      "tipo": "entrada",
+      "quantidade": 63,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.842Z"
+    },
+    {
+      "id": 1795097741848,
+      "produtoId": 57,
+      "produto": "Desodorante Aerosol",
+      "tipo": "entrada",
+      "quantidade": 32,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.848Z"
+    },
+    {
+      "id": 1795097741854,
+      "produtoId": 58,
+      "produto": "Papel Higiênico 12 Rolos",
+      "tipo": "entrada",
+      "quantidade": 43,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.854Z"
+    },
+    {
+      "id": 1795097741859,
+      "produtoId": 59,
+      "produto": "Fio Dental 50m",
+      "tipo": "entrada",
+      "quantidade": 15,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.859Z"
+    },
+    {
+      "id": 1795097741866,
+      "produtoId": 60,
+      "produto": "Absorvente 8un",
+      "tipo": "entrada",
+      "quantidade": 35,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.866Z"
+    },
+    {
+      "id": 1795097741871,
+      "produtoId": 61,
+      "produto": "Cotonete 150un",
+      "tipo": "entrada",
+      "quantidade": 50,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.871Z"
+    },
+    {
+      "id": 1795097741877,
+      "produtoId": 62,
+      "produto": "Pilha AA (par)",
+      "tipo": "entrada",
+      "quantidade": 84,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.877Z"
+    },
+    {
+      "id": 1795097741887,
+      "produtoId": 63,
+      "produto": "Pilha AAA (par)",
+      "tipo": "entrada",
+      "quantidade": 95,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.887Z"
+    },
+    {
+      "id": 1795097741901,
+      "produtoId": 64,
+      "produto": "Carregador Veicular USB",
+      "tipo": "entrada",
+      "quantidade": 76,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.901Z"
+    },
+    {
+      "id": 1795097741907,
+      "produtoId": 65,
+      "produto": "Fonte Carregador 5V",
+      "tipo": "entrada",
+      "quantidade": 118,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.907Z"
+    },
+    {
+      "id": 1795097741917,
+      "produtoId": 66,
+      "produto": "Caixa de Som Bluetooth",
+      "tipo": "entrada",
+      "quantidade": 46,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.917Z"
+    },
+    {
+      "id": 1795097741923,
+      "produtoId": 67,
+      "produto": "Lâmpada LED 9W",
+      "tipo": "entrada",
+      "quantidade": 14,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.923Z"
+    },
+    {
+      "id": 1795097741930,
+      "produtoId": 68,
+      "produto": "Extensão 3 Tomadas 3m",
+      "tipo": "entrada",
+      "quantidade": 125,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.930Z"
+    },
+    {
+      "id": 1795097741936,
+      "produtoId": 69,
+      "produto": "Filtro de Linha 5 Tomadas",
+      "tipo": "entrada",
+      "quantidade": 39,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.936Z"
+    },
+    {
+      "id": 1795097741942,
+      "produtoId": 70,
+      "produto": "Fita LED 5m",
+      "tipo": "entrada",
+      "quantidade": 68,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.942Z"
+    },
+    {
+      "id": 1795097741949,
+      "produtoId": 71,
+      "produto": "Adaptador de Tomada",
+      "tipo": "entrada",
+      "quantidade": 77,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.949Z"
+    },
+    {
+      "id": 1795097741955,
+      "produtoId": 72,
+      "produto": "Copo de Vidro 300ml",
+      "tipo": "entrada",
+      "quantidade": 39,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.955Z"
+    },
+    {
+      "id": 1795097741963,
+      "produtoId": 73,
+      "produto": "Prato Raso de Vidro",
+      "tipo": "entrada",
+      "quantidade": 14,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.963Z"
+    },
+    {
+      "id": 1795097741969,
+      "produtoId": 74,
+      "produto": "Jogo de Talheres 24 Peças",
+      "tipo": "entrada",
+      "quantidade": 10,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.969Z"
+    },
+    {
+      "id": 1795097741976,
+      "produtoId": 75,
+      "produto": "Garrafa Térmica 1L",
+      "tipo": "entrada",
+      "quantidade": 36,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.976Z"
+    },
+    {
+      "id": 1795097741984,
+      "produtoId": 76,
+      "produto": "Pote Plástico 1L",
+      "tipo": "entrada",
+      "quantidade": 87,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.984Z"
+    },
+    {
+      "id": 1795097741990,
+      "produtoId": 77,
+      "produto": "Panela de Pressão 4,5L",
+      "tipo": "entrada",
+      "quantidade": 13,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:41.990Z"
+    },
+    {
+      "id": 1795097742004,
+      "produtoId": 78,
+      "produto": "Escorredor de Louça",
+      "tipo": "entrada",
+      "quantidade": 95,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.004Z"
+    },
+    {
+      "id": 1795097742011,
+      "produtoId": 79,
+      "produto": "Vassoura",
+      "tipo": "entrada",
+      "quantidade": 106,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.011Z"
+    },
+    {
+      "id": 1795097742017,
+      "produtoId": 80,
+      "produto": "Rodo 40cm",
+      "tipo": "entrada",
+      "quantidade": 72,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.017Z"
+    },
+    {
+      "id": 1795097742023,
+      "produtoId": 81,
+      "produto": "Balde 10L",
+      "tipo": "entrada",
+      "quantidade": 22,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.023Z"
+    },
+    {
+      "id": 1795097742030,
+      "produtoId": 82,
+      "produto": "Quebra-Cabeça 100 Peças",
+      "tipo": "entrada",
+      "quantidade": 31,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.030Z"
+    },
+    {
+      "id": 1795097742035,
+      "produtoId": 83,
+      "produto": "Carrinho de Fricção",
+      "tipo": "entrada",
+      "quantidade": 26,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.035Z"
+    },
+    {
+      "id": 1795097742040,
+      "produtoId": 84,
+      "produto": "Boneca de Pano",
+      "tipo": "entrada",
+      "quantidade": 16,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.040Z"
+    },
+    {
+      "id": 1795097742048,
+      "produtoId": 85,
+      "produto": "Bola de Plástico",
+      "tipo": "entrada",
+      "quantidade": 22,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.048Z"
+    },
+    {
+      "id": 1795097742076,
+      "produtoId": 86,
+      "produto": "Jogo da Memória",
+      "tipo": "entrada",
+      "quantidade": 54,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.076Z"
+    },
+    {
+      "id": 1795097742081,
+      "produtoId": 87,
+      "produto": "Massinha de Modelar 6 Cores",
+      "tipo": "entrada",
+      "quantidade": 58,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.081Z"
+    },
+    {
+      "id": 1795097742087,
+      "produtoId": 88,
+      "produto": "Blocos de Montar 50 Peças",
+      "tipo": "entrada",
+      "quantidade": 20,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.087Z"
+    },
+    {
+      "id": 1795097742103,
+      "produtoId": 89,
+      "produto": "Lápis de Cor 12 Cores",
+      "tipo": "entrada",
+      "quantidade": 172,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.103Z"
+    },
+    {
+      "id": 1795097742111,
+      "produtoId": 90,
+      "produto": "Giz de Cera 12 Cores",
+      "tipo": "entrada",
+      "quantidade": 44,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.111Z"
+    },
+    {
+      "id": 1795097742120,
+      "produtoId": 91,
+      "produto": "Baralho",
+      "tipo": "entrada",
+      "quantidade": 53,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.120Z"
+    },
+    {
+      "id": 1795097742131,
+      "produtoId": 92,
+      "produto": "Martelo 25mm",
+      "tipo": "entrada",
+      "quantidade": 55,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.131Z"
+    },
+    {
+      "id": 1795097742139,
+      "produtoId": 93,
+      "produto": "Chave de Fenda",
+      "tipo": "entrada",
+      "quantidade": 113,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.139Z"
+    },
+    {
+      "id": 1795097742161,
+      "produtoId": 94,
+      "produto": "Chave Phillips",
+      "tipo": "entrada",
+      "quantidade": 11,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.161Z"
+    },
+    {
+      "id": 1795097742167,
+      "produtoId": 95,
+      "produto": "Alicate Universal",
+      "tipo": "entrada",
+      "quantidade": 15,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.167Z"
+    },
+    {
+      "id": 1795097742173,
+      "produtoId": 96,
+      "produto": "Trena 5m",
+      "tipo": "entrada",
+      "quantidade": 34,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.173Z"
+    },
+    {
+      "id": 1795097742181,
+      "produtoId": 97,
+      "produto": "Fita Isolante 10m",
+      "tipo": "entrada",
+      "quantidade": 26,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.181Z"
+    },
+    {
+      "id": 1795097742187,
+      "produtoId": 98,
+      "produto": "Parafusos 100un",
+      "tipo": "entrada",
+      "quantidade": 41,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.187Z"
+    },
+    {
+      "id": 1795097742193,
+      "produtoId": 99,
+      "produto": "Chave Inglesa",
+      "tipo": "entrada",
+      "quantidade": 96,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.193Z"
+    },
+    {
+      "id": 1795097742200,
+      "produtoId": 100,
+      "produto": "Serrote 18\"",
+      "tipo": "entrada",
+      "quantidade": 29,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.200Z"
+    },
+    {
+      "id": 1795097742206,
+      "produtoId": 101,
+      "produto": "Nível de Bolha",
+      "tipo": "entrada",
+      "quantidade": 102,
+      "observacao": "Estoque inicial",
+      "data": "2026-11-19T14:15:42.206Z"
+    },
+    {
+      "id": 1795098301201,
+      "produtoId": 32,
+      "produto": "Arroz Branco 5kg",
+      "tipo": "saida",
+      "quantidade": 36,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.201Z"
+    },
+    {
+      "id": 1795098301231,
+      "produtoId": 37,
+      "produto": "Óleo de Soja 900ml",
+      "tipo": "saida",
+      "quantidade": 56,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.231Z"
+    },
+    {
+      "id": 1795098301238,
+      "produtoId": 38,
+      "produto": "Farinha de Trigo 1kg",
+      "tipo": "saida",
+      "quantidade": 26,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.238Z"
+    },
+    {
+      "id": 1795098301244,
+      "produtoId": 39,
+      "produto": "Sal Refinado 1kg",
+      "tipo": "saida",
+      "quantidade": 4,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.244Z"
+    },
+    {
+      "id": 1795098301268,
+      "produtoId": 41,
+      "produto": "Leite Integral 1L",
+      "tipo": "saida",
+      "quantidade": 28,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.268Z"
+    },
+    {
+      "id": 1795098301301,
+      "produtoId": 42,
+      "produto": "Água Mineral 500ml",
+      "tipo": "saida",
+      "quantidade": 23,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.301Z"
+    },
+    {
+      "id": 1795098301323,
+      "produtoId": 43,
+      "produto": "Água Mineral 1,5L",
+      "tipo": "saida",
+      "quantidade": 14,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.323Z"
+    },
+    {
+      "id": 1795098301353,
+      "produtoId": 45,
+      "produto": "Refrigerante Guaraná 2L",
+      "tipo": "saida",
+      "quantidade": 39,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.353Z"
+    },
+    {
+      "id": 1795098301367,
+      "produtoId": 47,
+      "produto": "Suco de Uva 1L",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.367Z"
+    },
+    {
+      "id": 1795098301381,
+      "produtoId": 48,
+      "produto": "Chá Gelado 450ml",
+      "tipo": "saida",
+      "quantidade": 16,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.381Z"
+    },
+    {
+      "id": 1795098301398,
+      "produtoId": 82,
+      "produto": "Quebra-Cabeça 100 Peças",
+      "tipo": "saida",
+      "quantidade": 7,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.398Z"
+    },
+    {
+      "id": 1795098301405,
+      "produtoId": 85,
+      "produto": "Bola de Plástico",
+      "tipo": "saida",
+      "quantidade": 16,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.405Z"
+    },
+    {
+      "id": 1795098301431,
+      "produtoId": 87,
+      "produto": "Massinha de Modelar 6 Cores",
+      "tipo": "saida",
+      "quantidade": 11,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.431Z"
+    },
+    {
+      "id": 1795098301448,
+      "produtoId": 91,
+      "produto": "Baralho",
+      "tipo": "saida",
+      "quantidade": 15,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.448Z"
+    },
+    {
+      "id": 1795098301465,
+      "produtoId": 64,
+      "produto": "Carregador Veicular USB",
+      "tipo": "saida",
+      "quantidade": 5,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.465Z"
+    },
+    {
+      "id": 1795098301471,
+      "produtoId": 66,
+      "produto": "Caixa de Som Bluetooth",
+      "tipo": "saida",
+      "quantidade": 2,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.471Z"
+    },
+    {
+      "id": 1795098301487,
+      "produtoId": 69,
+      "produto": "Filtro de Linha 5 Tomadas",
+      "tipo": "saida",
+      "quantidade": 7,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.487Z"
+    },
+    {
+      "id": 1795098301499,
+      "produtoId": 70,
+      "produto": "Fita LED 5m",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.499Z"
+    },
+    {
+      "id": 1795098301515,
+      "produtoId": 92,
+      "produto": "Martelo 25mm",
+      "tipo": "saida",
+      "quantidade": 12,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.515Z"
+    },
+    {
+      "id": 1795098301535,
+      "produtoId": 94,
+      "produto": "Chave Phillips",
+      "tipo": "saida",
+      "quantidade": 2,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.535Z"
+    },
+    {
+      "id": 1795098301552,
+      "produtoId": 97,
+      "produto": "Fita Isolante 10m",
+      "tipo": "saida",
+      "quantidade": 1,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.552Z"
+    },
+    {
+      "id": 1795098301569,
+      "produtoId": 98,
+      "produto": "Parafusos 100un",
+      "tipo": "saida",
+      "quantidade": 13,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.569Z"
+    },
+    {
+      "id": 1795098301584,
+      "produtoId": 99,
+      "produto": "Chave Inglesa",
+      "tipo": "saida",
+      "quantidade": 25,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.584Z"
+    },
+    {
+      "id": 1795098301602,
+      "produtoId": 52,
+      "produto": "Sabonete 90g",
+      "tipo": "saida",
+      "quantidade": 8,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.602Z"
+    },
+    {
+      "id": 1795098301618,
+      "produtoId": 54,
+      "produto": "Condicionador 350ml",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.618Z"
+    },
+    {
+      "id": 1795098301634,
+      "produtoId": 55,
+      "produto": "Creme Dental 90g",
+      "tipo": "saida",
+      "quantidade": 14,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.634Z"
+    },
+    {
+      "id": 1795098301651,
+      "produtoId": 56,
+      "produto": "Escova de Dentes",
+      "tipo": "saida",
+      "quantidade": 20,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.651Z"
+    },
+    {
+      "id": 1795098301669,
+      "produtoId": 57,
+      "produto": "Desodorante Aerosol",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.669Z"
+    },
+    {
+      "id": 1795098301699,
+      "produtoId": 60,
+      "produto": "Absorvente 8un",
+      "tipo": "saida",
+      "quantidade": 2,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.699Z"
+    },
+    {
+      "id": 1795098301725,
+      "produtoId": 13,
+      "produto": "Teclado USB ABNT2",
+      "tipo": "saida",
+      "quantidade": 7,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.725Z"
+    },
+    {
+      "id": 1795098301733,
+      "produtoId": 14,
+      "produto": "Pen Drive 32GB",
+      "tipo": "saida",
+      "quantidade": 5,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.733Z"
+    },
+    {
+      "id": 1795098301750,
+      "produtoId": 17,
+      "produto": "Cabo USB-C 1m",
+      "tipo": "saida",
+      "quantidade": 4,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.750Z"
+    },
+    {
+      "id": 1795098301770,
+      "produtoId": 19,
+      "produto": "Fone de Ouvido com Microfone",
+      "tipo": "saida",
+      "quantidade": 29,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.770Z"
+    },
+    {
+      "id": 1795098301780,
+      "produtoId": 20,
+      "produto": "Mousepad Comum",
+      "tipo": "saida",
+      "quantidade": 24,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.780Z"
+    },
+    {
+      "id": 1795098301799,
+      "produtoId": 21,
+      "produto": "Hub USB 4 Portas",
+      "tipo": "saida",
+      "quantidade": 15,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.799Z"
+    },
+    {
+      "id": 1795098301819,
+      "produtoId": 25,
+      "produto": "Sabão em Pó 1kg",
+      "tipo": "saida",
+      "quantidade": 8,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.819Z"
+    },
+    {
+      "id": 1795098301824,
+      "produtoId": 29,
+      "produto": "Saco de Lixo 50L (10un)",
+      "tipo": "saida",
+      "quantidade": 33,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:01.824Z"
+    },
+    {
+      "id": 1795098301854,
+      "produtoId": 30,
+      "produto": "Álcool 70% 1L",
+      "tipo": "saida",
+      "quantidade": 2,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.854Z"
+    },
+    {
+      "id": 1795098301883,
+      "produtoId": 6,
+      "produto": "Caderno 100 Folhas",
+      "tipo": "saida",
+      "quantidade": 21,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.883Z"
+    },
+    {
+      "id": 1795098301901,
+      "produtoId": 7,
+      "produto": "Caderno 200 Folhas",
+      "tipo": "saida",
+      "quantidade": 20,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.901Z"
+    },
+    {
+      "id": 1795098301924,
+      "produtoId": 8,
+      "produto": "Bloco de Notas Adesivas",
+      "tipo": "saida",
+      "quantidade": 4,
+      "observacao": "Venda em quantidade",
+      "data": "2026-11-19T14:25:01.924Z"
+    },
+    {
+      "id": 1795098301948,
+      "produtoId": 9,
+      "produto": "Régua 30cm",
+      "tipo": "saida",
+      "quantidade": 10,
+      "observacao": "Venda para cliente",
+      "data": "2026-11-19T14:25:01.948Z"
+    },
+    {
+      "id": 1795098301965,
+      "produtoId": 10,
+      "produto": "Cola Bastão 20g",
+      "tipo": "saida",
+      "quantidade": 11,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.965Z"
+    },
+    {
+      "id": 1795098301972,
+      "produtoId": 11,
+      "produto": "Marca-Texto Amarelo",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.972Z"
+    },
+    {
+      "id": 1795098301981,
+      "produtoId": 72,
+      "produto": "Copo de Vidro 300ml",
+      "tipo": "saida",
+      "quantidade": 12,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.981Z"
+    },
+    {
+      "id": 1795098301998,
+      "produtoId": 73,
+      "produto": "Prato Raso de Vidro",
+      "tipo": "saida",
+      "quantidade": 3,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:01.998Z"
+    },
+    {
+      "id": 1795098302014,
+      "produtoId": 74,
+      "produto": "Jogo de Talheres 24 Peças",
+      "tipo": "saida",
+      "quantidade": 1,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:02.014Z"
+    },
+    {
+      "id": 1795098302032,
+      "produtoId": 76,
+      "produto": "Pote Plástico 1L",
+      "tipo": "saida",
+      "quantidade": 24,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:02.032Z"
+    },
+    {
+      "id": 1795098302052,
+      "produtoId": 77,
+      "produto": "Panela de Pressão 4,5L",
+      "tipo": "saida",
+      "quantidade": 2,
+      "observacao": "Venda online",
+      "data": "2026-11-19T14:25:02.052Z"
+    },
+    {
+      "id": 1795098302064,
+      "produtoId": 79,
+      "produto": "Vassoura",
+      "tipo": "saida",
+      "quantidade": 29,
+      "observacao": "Venda balcão",
+      "data": "2026-11-19T14:25:02.064Z"
     }
   ]
 }
